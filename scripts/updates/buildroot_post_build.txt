@@ -1,0 +1,9 @@
+
+# Automatic mount
+FSTAB="${TARGET_DIR}/etc/fstab"
+
+if ! grep -q "^host0" "$FSTAB"; then
+    echo "host0           /mnt/host       9p      trans=virtio,version=9p2000.L   0       0" >> "$FSTAB"
+fi
+
+mkdir -p "${TARGET_DIR}/mnt/host"

@@ -1,0 +1,5 @@
+buildroot/
+qemu/
+linux/
+
+qemu-debug.log
